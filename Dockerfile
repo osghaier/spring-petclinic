@@ -1,4 +1,5 @@
 FROM anapsix/alpine-java
-COPY /target/spring-petclinic-1.5.1.jar /data/spring-petclinic-1.5.1.jar 
-CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
+RUN mkdir -p /app
+COPY /target/spring-petclinic-1.5.1.jar /app/spring-petclinic-1.5.1.jar 
+CMD ["java","-jar","/app/spring-petclinic-1.5.1.jar"]
 
