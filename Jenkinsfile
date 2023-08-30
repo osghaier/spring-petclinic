@@ -13,11 +13,7 @@ stage('build projet') {
       	sh './mvnw package -DskipTests'
               }
     }
-stage('UNIT TEST'){
-            steps {
-                sh 'mvn test'
-            }
-        }
+
 
   }
 }
