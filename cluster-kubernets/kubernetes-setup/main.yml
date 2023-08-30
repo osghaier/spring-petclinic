@@ -1,0 +1,12 @@
+---
+workspace: /root
+hostname: master
+
+apache_enablerepo: remi
+apache_vhosts:
+  - {servername: "lamp", documentroot: "/var/www/html"}
+
+php_enablerepo: remi
+
+mysql_root_password: root
+mysql_enablerepo: remi
