@@ -15,11 +15,7 @@ stage('build projet') {
     }
 stage('test sonar') {
         steps {
-      	sh 'mvn clean verify sonar:sonar -DskipTests \
-  -Dsonar.projectKey=spring-petclinic \
-  -Dsonar.projectName='spring-petclinic' \
-  -Dsonar.host.url=http://192.168.202.130:9000 \
-  -Dsonar.token=sqp_fdd79969ae0ffe1ffcf26f6fd0e1655df9f0b114'
+      	sh 'mvn clean verify sonar:sonar -DskipTests -Dsonar.projectKey=spring-petclinic -Dsonar.projectName="spring-petclinic" -Dsonar.host.url=http://192.168.202.130:9000 -Dsonar.token=sqp_fdd79969ae0ffe1ffcf26f6fd0e1655df9f0b114'
               }
     }
 
