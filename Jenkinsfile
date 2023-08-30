@@ -1,17 +1,22 @@
 pipeline {
-	agent any
+agent any
+
 stages {
+
 stage('Maven Install') {
-    	
-      steps {
+      steps   {
       	sh 'mvn clean install -DskipTests'
-      }
+              }
     }
 stage('build projet') {
-    	
-      steps {
+        steps {
       	sh './mvnw package -DskipTests'
-      }
+              }
     }
+stage('integration TEST'){
+        steps {
+         sh 'mvn verify -DskipUnitTests'
+            }
+        }
   }
 }
