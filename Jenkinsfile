@@ -7,7 +7,7 @@ stage('Maven Install') {
       	sh 'mvn clean install -DskipTests'
       }
     }
-stage('Maven start') {
+stage('build projet') {
     	
       steps {
       	sh './mvnw package -DskipTests'
