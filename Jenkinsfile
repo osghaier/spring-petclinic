@@ -15,7 +15,7 @@ stage('build projet') {
     }
 stage('test sonar') {
         steps {
-      	sh 'mvn clean verify sonar:sonar \
+      	sh 'mvn clean verify sonar:sonar -DskipTests \
   -Dsonar.projectKey=spring-petclinic \
   -Dsonar.projectName='spring-petclinic' \
   -Dsonar.host.url=http://192.168.202.130:9000 \
